@@ -7,15 +7,21 @@ import { AppComponent } from './app.component';
 import { CategoryService } from './services/category.service';
 import { ClientService } from './services/client.service';
 import { CountryService } from './services/country.service';
+import { ClientsComponent } from './components/clients/clients.component';
+import { CategoryComponent } from './components/category/category.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClientsComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [CountryService, ClientService, CategoryService],
   bootstrap: [AppComponent]

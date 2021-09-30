@@ -52,13 +52,13 @@
 							<a href="index.html" class="btn nav active">TimeSheet</a>
 						</li>
 						<li>
-							<a routerLink="client" class="btn nav">Clients</a>
+							<a routerLink = "/client" class="btn nav">Clients</a>
 						</li>
 						<li>
 							<a href="projects.html" class="btn nav">Projects</a>
 						</li>
 						<li>
-							<a href="categories.html" class="btn nav">Categories</a>
+							<a routerLink = "/category" class="btn nav">Categories</a>
 						</li>
 						<li>
 							<a href="team-members.html" class="btn nav">Team members</a>
@@ -520,6 +520,6 @@
 <script type="text/javascript" src="assets/scripts/main/default.js"></script>
 
 <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<app-root></app-root>
+<router-outlet></router-outlet>
 </body>
 </html>
