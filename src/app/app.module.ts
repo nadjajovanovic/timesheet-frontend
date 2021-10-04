@@ -10,12 +10,15 @@ import { CountryService } from './services/country.service';
 import { ClientsComponent } from './components/clients/clients.component';
 import { CategoryComponent } from './components/category/category.component';
 import { RouterModule } from '@angular/router';
+import { TeamMemberComponent } from './components/team-member/team-member.component';
+import { TeamMemberService } from './services/team-member.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientsComponent,
-    CategoryComponent
+    CategoryComponent,
+    TeamMemberComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule
   ],
-  providers: [CountryService, ClientService, CategoryService],
+  providers: [CountryService, ClientService, CategoryService, TeamMemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
