@@ -12,13 +12,15 @@ import { CategoryComponent } from './components/category/category.component';
 import { RouterModule } from '@angular/router';
 import { TeamMemberComponent } from './components/team-member/team-member.component';
 import { TeamMemberService } from './services/team-member.service';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientsComponent,
     CategoryComponent,
-    TeamMemberComponent
+    TeamMemberComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
