@@ -13,6 +13,9 @@ import { RouterModule } from '@angular/router';
 import { TeamMemberComponent } from './components/team-member/team-member.component';
 import { TeamMemberService } from './services/team-member.service';
 import { ProjectComponent } from './components/project/project.component';
+import { ProjectService } from './services/project.service';
+import { ReportService } from './services/report.service';
+import { ReportComponent } from './components/report/report.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { ProjectComponent } from './components/project/project.component';
     ClientsComponent,
     CategoryComponent,
     TeamMemberComponent,
-    ProjectComponent
+    ProjectComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,7 @@ import { ProjectComponent } from './components/project/project.component';
     HttpClientModule,
     RouterModule
   ],
-  providers: [CountryService, ClientService, CategoryService, TeamMemberService],
+  providers: [CountryService, ClientService, CategoryService, TeamMemberService, ProjectService, ReportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
