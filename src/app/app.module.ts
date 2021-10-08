@@ -16,6 +16,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { ProjectService } from './services/project.service';
 import { ReportService } from './services/report.service';
 import { ReportComponent } from './components/report/report.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { ReportComponent } from './components/report/report.component';
     HttpClientModule,
     RouterModule
   ],
-  providers: [CountryService, ClientService, CategoryService, TeamMemberService, ProjectService, ReportService],
+  providers: [CountryService, ClientService, CategoryService, TeamMemberService, ProjectService, ReportService, { provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

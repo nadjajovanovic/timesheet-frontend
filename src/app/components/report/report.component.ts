@@ -17,7 +17,7 @@ export class ReportComponent implements OnInit {
   categories: Category[] = [];
   teamMembers: TeamMember[] = [];
   clients: Client[] = [];
-  pojects: Project[] =[];
+  projects: Project[] =[];
 
   constructor(private reportService : ReportService,
     @Inject(Report) public data: Report) { }
