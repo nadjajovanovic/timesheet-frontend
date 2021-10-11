@@ -33,6 +33,7 @@ import { APP_BASE_HREF } from '@angular/common';
     HttpClientModule,
     RouterModule
   ],
+  entryComponents: [ClientsComponent],
   providers: [CountryService, ClientService, CategoryService, TeamMemberService, ProjectService, ReportService, { provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })

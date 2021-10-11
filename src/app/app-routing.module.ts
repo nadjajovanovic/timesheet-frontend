@@ -7,7 +7,7 @@ import { ReportComponent } from './components/report/report.component';
 import { TeamMemberComponent } from './components/team-member/team-member.component';
 
 const routes: Routes = [
-  { path: 'client', component: ClientsComponent },
+  { path: 'clients', component: ClientsComponent },
   { path: 'category', component: CategoryComponent},
   { path: 'team-member', component: TeamMemberComponent},
   { path: 'project', component: ProjectComponent },

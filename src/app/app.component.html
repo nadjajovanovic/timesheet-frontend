@@ -32,19 +32,19 @@
 					<a href="index.html" class="btn nav active">TimeSheet</a>
 				</li>
 				<li>
-					<a [routerLink] = "['client']" class="btn nav">Clients</a>
+					<a routerLink = '/clients' class="btn nav">Clients</a>
 				</li>
 				<li>
-					<a [routerLink]="['project']" class="btn nav">Projects</a>
+					<a routerLink ='/project' class="btn nav">Projects</a>
 				</li>
 				<li>
-					<a [routerLink] = "['category']" class="btn nav">Categories</a>
+					<a routerLink = '/category' class="btn nav">Categories</a>
 				</li>
 				<li>
-					<a [routerLink]="['team-member']" class="btn nav">Team members</a>
+					<a routerLink ='/team-member' class="btn nav">Team members</a>
 				</li>
 				<li class="last">
-					<a [routerLink] = "['report']" class="btn nav">Reports</a>
+					<a routerLink = '/report' class="btn nav">Reports</a>
 				</li>
 			</ul>
 			<div class="mobile-menu">
@@ -77,54 +77,6 @@
 	</div>
 </header>
 <div class="container">
-	<nav>
-		<ul class="menu">
-			<li>
-				<a href="index.html" class="btn nav active">TimeSheet</a>
-			</li>
-			<li>
-				<a [routerLink] = "['client']"  class="btn nav">Clients</a>
-			</li>
-			<li>
-				<a [routerLink]="['project']" class="btn nav">Projects</a>
-			</li>
-			<li>
-				<a [routerLink] = "['category']" class="btn nav">Categories</a>
-			</li>
-			<li>
-				<a [routerLink]="['team-member']" class="btn nav">Team members</a>
-			</li>
-			<li class="last">
-				<a [routerLink]="['report']" class="btn nav">Reports</a>
-			</li>
-		</ul>
-		<div class="mobile-menu">
-			<a href="javascript:;" class="menu-btn">
-				<i class="zmdi zmdi-menu"></i>
-			</a>
-			<ul>
-				<li>
-					<a href="javascript:;">TimeSheet</a>
-				</li>
-				<li>
-					<a href="javascript:;">Clients</a>
-				</li>
-				<li>
-					<a href="javascript:;">Projects</a>
-				</li>
-				<li>
-					<a href="javascript:;">Categories</a>
-				</li>
-				<li>
-					<a href="javascript:;">Team members</a>
-				</li>
-				<li class="last">
-					<a href="javascript:;">Reports</a>
-				</li>
-			</ul>
-		</div>					
-		<span class="line"></span>
-	</nav>
 	<div class="wrapper">
 		<section class="content">
 			<h2><i class="ico timesheet"></i>TimeSheet</h2>
@@ -521,8 +473,7 @@
 			<div class="total">
 				<span>Total hours: <em>90</em></span>
 			</div>
-		</section>
-		<router-outlet></router-outlet>			
+		</section>			
 	</div>
 	<footer class="footer">
 		<div class="wrapper">
@@ -541,4 +492,8 @@
 			</ul>
 		</div>
 	</footer>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write("<script src='../../assets/scripts/main/jquery-1.8.3.min.js'>\x3C/script>")</script>
+	<script type="text/javascript" src="../../assets/scripts/main/default.js"></script>
 </div>
+<router-outlet></router-outlet>

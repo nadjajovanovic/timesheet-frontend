@@ -3,7 +3,9 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Client } from "../models/client";
 
-@Injectable()
+@Injectable({
+    providedIn: "any"
+})
 export class ClientService {
     private readonly clientUrl = 'http://localhost:8083/client';
 
