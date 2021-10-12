@@ -14,25 +14,29 @@ export class ClientsComponent implements OnInit {
   clients: Client[] = [];
   countries: Country[] = [];
 
-  constructor(private clientService: ClientService,
-    @Inject(Client) public data: Client ) { }
+  constructor(private clientService: ClientService) { }
 
   ngOnInit(): void {
-    this.clientService.getAllClients().subscribe(data => {
-      this.clients = data;
-    });
+    this.getClients();
   }
 
-  public addClient() {
-    this.clientService.addClient(this.data);
+  public getClients() : void {
+    this.clientService.getAllClients().subscribe(clients => {
+      this.clients = clients;
+    })
+  }
+
+  /*public addClient() {
+    this.clientService.addClient();
   }
 
   public updateCLient(): void {
-    this.clientService.editClient(this.data);
+    this.clientService.editClient();
   }
 
   public deleteClient(): void {
-    this.clientService.deleteClient(this.data.clientid);
-  }
+    this.clientService.deleteClient();
+  }*/
 
 }
+
