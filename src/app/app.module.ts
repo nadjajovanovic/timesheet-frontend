@@ -17,6 +17,7 @@ import { ProjectService } from './services/project.service';
 import { ReportService } from './services/report.service';
 import { ReportComponent } from './components/report/report.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { APP_BASE_HREF } from '@angular/common';
     CategoryComponent,
     TeamMemberComponent,
     ProjectComponent,
-    ReportComponent
+    ReportComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
