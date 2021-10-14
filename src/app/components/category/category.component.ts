@@ -11,16 +11,38 @@ export class CategoryComponent implements OnInit {
 
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService,
-    @Inject(Category) public data: Category) { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.categoryService.getAllCategories().subscribe(data => {
-      this.categories = data;
+    this.getCategories();
+  }
+
+  public getCategories() : void {
+    this.categoryService.getAllCategories().subscribe(categories => {
+      this.categories = categories;
+
+      $(document).ready(function () {
+        var heading = '.accordion-wrap .heading';
+      
+        $(heading).click(function () {
+          if (!$(this).parent().hasClass('open')) {
+            $(this).parent().addClass('open');
+            $(this).next().slideDown('normal');
+          } else {
+            $(this).parent().removeClass('open');
+            $(this).next().slideUp('normal');
+          }
+        });
+
+        /*if ($('.new-member-popup').length) {
+          $('.new-member-popup').fancybox();
+        }*/
+      });
+    
     });
   }
 
-  public addCategory(): void {
+  /*public addCategory(): void {
     this.categoryService.addCategory(this.data);
   }
 
@@ -30,6 +52,6 @@ export class CategoryComponent implements OnInit {
 
   public deleteCategory(): void {
     this.categoryService.deleteCategory(this.data.categoryid);
-  }
+  }*/
 
 }

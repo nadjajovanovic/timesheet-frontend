@@ -33,9 +33,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  entryComponents: [ClientsComponent],
+  entryComponents: [],
   providers: [CountryService, ClientService, CategoryService, TeamMemberService, ProjectService, ReportService, { provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
