@@ -2,7 +2,6 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Client } from 'src/app/models/client';
 import { Country } from 'src/app/models/country';
 import { ClientService } from 'src/app/services/client.service';
-import { CountryService } from 'src/app/services/country.service';
 
 @Component({
   selector: 'app-clients',
@@ -15,6 +14,7 @@ export class ClientsComponent implements OnInit {
   countries: Country[] = [];
 
   constructor(private clientService: ClientService) { }
+
 
   ngOnInit(): void {
     this.getClients();
